@@ -1,0 +1,15 @@
+{
+	"name": "pull-promise-map",
+	"description": "Map for pull-streams. With Promise support.",
+	"version": "0.0.1",
+	"repository": "srcagency/pull-promise-map",
+	"scripts": {
+		"test": "node test"
+	},
+	"devDependencies": {
+		"bluebird": "^3.4.7",
+		"pull-stream": "^3.5.0",
+		"tape": "^4.6.3"
+	},
+	"license": "MIT"
+}
