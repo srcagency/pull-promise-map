@@ -3,13 +3,14 @@
 	"description": "Map for pull-streams. With Promise support.",
 	"version": "0.0.1",
 	"repository": "srcagency/pull-promise-map",
+	"type": "module",
 	"scripts": {
 		"test": "node test"
 	},
 	"devDependencies": {
-		"bluebird": "^3.4.7",
+		"psp-collect": "^1.0.1",
 		"pull-stream": "^3.5.0",
-		"tape": "^4.6.3"
+		"tape": "^5.7.5"
 	},
 	"license": "MIT"
 }

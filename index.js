@@ -1,24 +1,13 @@
-'use strict';
+export default function map(transform) {
+	return (read) => (end, cb) =>
+		read(end, function (end, chunk) {
+			if (end !== null) {
+				return cb(end)
+			}
 
-module.exports = map;
-
-var native = typeof Promise !== 'undefined' && Promise;
-
-function map( transform, Promise ){
-	Promise = Promise || map.Promise || native;
-
-	return function( read ){
-		return function( end, cb ){
-			return read(end, function( end, chunk ){
-				if (end !== null)
-					return cb(end);
-
-				return Promise
-					.resolve(transform(chunk))
-					.then(function( v ){
-						return cb(null, v);
-					}, cb);
-			});
-		}
-	}
+			return Promise.resolve(transform(chunk)).then(
+				(v) => cb(null, v),
+				cb,
+			)
+		})
 }
