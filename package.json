@@ -3,6 +3,7 @@
 	"description": "Map for pull-streams. With Promise support.",
 	"version": "1.0.0",
 	"repository": "srcagency/pull-promise-map",
+	"main": "index.js",
 	"type": "module",
 	"scripts": {
 		"test": "node test"
